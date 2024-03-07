@@ -1,5 +1,5 @@
 #tw-voucher-redeem
-่Just a automatically redeem wallets for <i>truemoney wallet</i>
+Just a automatically redeem wallets for <i>truemoney wallet</i>
 
 <p align="center">
   <img src="/public/maxresdefault.jpg"/>
