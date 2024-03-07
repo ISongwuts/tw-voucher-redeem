@@ -12,6 +12,13 @@ credit to me!! UwU
 npm install -s tw-voucher-redeem
 ```
 
+##Setup
+Go to `demo.env` file and update your phone number below.
+
+```env
+PHONENUMBER="Your phone number."
+```
+
 ##Usage
 
 ```typescript
@@ -20,8 +27,8 @@ async function main() {
     TWTransaction constructor: 
         phoneNunber: string
         voucherURL: string
-        * you can pass only code or url in voucherURL parameter. *
-    */
+    * you can pass only code or url in voucherURL parameter. *
+  */
   const phoneNumber = process.env.PHONENUMBER || "Your phone number.";
   const t = new TWTransaction(
     phoneNumber,
