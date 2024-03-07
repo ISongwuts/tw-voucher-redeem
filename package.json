@@ -4,13 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc --w ./src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc --w",
+    "test": "tsc ./src/test/test.ts"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "node-fetch": "^3.3.2"
-  }
+  "license": "ISC"
 }
