@@ -5,7 +5,6 @@ class Transaction {
 class TWTransaction extends Transaction {
     constructor(phoneNumber, voucherURL) {
         super(phoneNumber, voucherURL);
-        this.isURL = false;
         this.phoneNumber = phoneNumber;
         this.voucherURL = voucherURL;
     }
@@ -25,10 +24,26 @@ class TWTransaction extends Transaction {
             throw new Error(error.message);
         }
     }
+    getRedeemCode(s) {
+        if (this.URLChecker(s)) {
+            const urlParams = new URLSearchParams(this.voucherURL.split("?")[1]);
+            const url = urlParams.get("v");
+            return url;
+        }
+        return s;
+    }
+    URLChecker(s) {
+        const re = new RegExp('^(?!mailto:)(?:(?:http|https|ftp)://)(?:\\S+(?::\\S*)?@)?(?:(?:(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[0-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\\u00a1-\\uffff0-9]+-?)*[a-z\\u00a1-\\uffff0-9]+)(?:\\.(?:[a-z\\u00a1-\\uffff0-9]+-?)*[a-z\\u00a1-\\uffff0-9]+)*(?:\\.(?:[a-z\\u00a1-\\uffff]{2,})))|localhost)(?::\\d{2,5})?(?:(/|\\?|#)[^\\s]*)?$');
+        console.log(re.test(s));
+        if (re.test(s))
+            return true;
+        return false;
+    }
 }
 async function main() {
-    const t = new TWTransaction("0612057144", "https://gift.truemoney.com/campaign/?v=662fe462daf74b14b001fd65ad006161643");
+    const t = new TWTransaction("0612057144", "https://gift.truemoney.com/campaign/voucher_detail?v=662fe462daf74b14b001fd65ad006161643");
     const response = await t.redeem();
-    console.log(response);
+    const data = await response.json();
+    console.log(data);
 }
 main();
