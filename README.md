@@ -1,4 +1,4 @@
-#tw-voucher-redeem
+# tw-voucher-redeem
 
 Just a automatically redeem wallets for <i>truemoney wallet</i>
 
@@ -6,26 +6,26 @@ Just a automatically redeem wallets for <i>truemoney wallet</i>
   <img src="/public/maxresdefault.jpg"/>
 </p>
 
-##Introduction
+## Introduction
 
 this side project made for fun cuz im bored :(
 Nvm, Please skip this introduction and...
 credit to me!! UwU
 
-##Installation
+## Installation
 
 ```
 npm install -s tw-voucher-redeem
 ```
 
-##Setup
+## Setup
 Go to `demo.env` file and update your phone number below.
 
 ```env
 PHONENUMBER="Your phone number."
 ```
 
-##Usage
+## Usage
 
 ```typescript
 async function main() {
@@ -46,8 +46,8 @@ async function main() {
 }
 ```
 
-###Support me :)
+### Support me :)
 [Follow me!, I want connection hehehehehe]('https://github.com/ISongwuts')
 
-###Credit to
+### Credit to
 `@ISongwuts`
