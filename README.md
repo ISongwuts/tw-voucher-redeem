@@ -49,5 +49,7 @@ async function main() {
 ### Support me :)
 [Follow me!, I want connection hehehehehe]('https://github.com/ISongwuts')
 
+### Send PR if you get a problems
+
 ### Credit to
 `@ISongwuts`
