@@ -1,6 +1,9 @@
 #tw-voucher-redeem
 ่Just a automatically redeem wallets for <i>truemoney wallet</i>
-<img src="/public/maxresdefault.jpg"/>
+
+<p align="center">
+  <img src="/public/maxresdefault.jpg"/>
+</p>
 
 ##Introduction
 this side project made for fun cuz im bored :(
