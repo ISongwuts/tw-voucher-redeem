@@ -16,14 +16,15 @@ npm install -s tw-voucher-redeem
 
 ```typescript
 async function main() {
-    /*
+  /*
     TWTransaction constructor: 
         phoneNunber: string
         voucherURL: string
         * you can pass only code or url in voucherURL parameter. *
     */
+  const phoneNumber = process.env.PHONENUMBER || "Your phone number.";
   const t = new TWTransaction(
-    "0612057144",
+    phoneNumber,
     "https://gift.truemoney.com/campaign/voucher_detail?v=662fe462daf74b14b001fd65ad006161643"
   );
   const response = await t.redeem();
